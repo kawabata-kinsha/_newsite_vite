@@ -44,10 +44,6 @@
 <link rel="stylesheet" href="/assets/dist/<?php echo $vite_manifest_ary[$vite_input_scss]["file"];?>" />
 <?php endif; ?>
 </head>
-</head>
-
-
-</head>
 
 
 <body class="<?php echo $isCommon ? "category--common " : ""; ?>category--<?php echo $categoryName; ?> page--<?php echo $categoryName; ?>__<?php echo $pageName; ?>">
