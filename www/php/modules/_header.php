@@ -19,7 +19,7 @@
 
 <!-- twitter -->
 <meta property="twitter:card" content="summary_large_image" />
-<meta content="<?php echo $twitterId; ?>" name="twitter:site" />
+<meta content="" name="twitter:site" />
 <meta property="twitter:url" content="<?php echo (empty($_SERVER["HTTPS"]) ? "http://" : "https://") . $_SERVER["HTTP_HOST"] . $_SERVER['REQUEST_URI']; ?>" />
 <meta property="twitter:title" content="<?php echo $title; ?>" />
 <meta property="twitter:description" content="<?php echo $pageDescription; ?>" />
@@ -36,13 +36,14 @@
 <link href="<?php echo $rootImg; ?>/favicons/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 <!-- css -->
-<?php if($vite_dev_fp): ?>
+<?php if($vite_dev_standing): ?>
 <!-- dev -->
-<script type="module" src="<?php echo $vite_dev; ?>/src/scss/style.scss"></script>
+<script type="module" src="<?php echo $vite_dev_path; ?>/<?php echo $vite_input_scss; ?>"></script>
 <?php else: ?>
 <!-- build -->
-<link rel="stylesheet" href="/assets/dist/<?php echo $arr["src/ts/main.css"]["file"];?>" />
+<link rel="stylesheet" href="/assets/dist/<?php echo $vite_manifest_ary[$vite_input_scss]["file"];?>" />
 <?php endif; ?>
+</head>
 </head>
 
 

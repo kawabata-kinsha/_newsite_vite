@@ -6,7 +6,10 @@ export default defineConfig({
 		assetsDir: '',
 		manifest: true,
 		rollupOptions: {
-		  input: '/src/ts/main.ts',
+			input: {
+				ts: 'src/ts/main.ts',
+				scss: 'src/scss/style.scss'
+			}
 		},
 	  },
 	css: {
