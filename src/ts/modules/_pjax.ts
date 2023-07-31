@@ -75,28 +75,22 @@ export class Pjax {
 	}
 
 	private changeTitle(html: Document){
-		const el = html.querySelector('title');
-		if(el){
-			const nextTitle = el.innerText;
-			document.title = nextTitle;
-		}
+		const el = html.querySelector('title')!;
+		const nextTitle = el.innerText;
+		document.title = nextTitle;
 	}
 	private changeBodyClass(html: Document){
-		const htmlBody = html.querySelector('body');
-		const el = document.querySelector('body');
-		if(htmlBody && el){
-			const bodyClassList = el.classList['value'];
-			el.setAttribute('class', bodyClassList);
-		}
+		const htmlBody = html.querySelector('body')!;
+		const el = document.querySelector('body')!;
+		const bodyClassList = htmlBody.classList['value'];
+		el.setAttribute('class', bodyClassList);
 	}
 
 	private changeContents(html: Document){
-		const htmlTarget = html.querySelector(this.target);
-		const el = document.querySelector(this.target);
-		if(htmlTarget && el){
-			const nextContents =  htmlTarget.innerHTML;
-			el.innerHTML = nextContents;
-		}
+		const htmlTarget = html.querySelector(this.target)!;
+		const el = document.querySelector(this.target)!;
+		const nextContents =  htmlTarget.innerHTML;
+		el.innerHTML = nextContents;
 	}
 
 	protected onLoad(){}
