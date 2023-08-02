@@ -1,4 +1,3 @@
-import '../scss/style.scss';
 // import { ShowElementOnScroll } from "./modules/_showElementOnScroll";
 // import { Inview } from "./modules/_inview";
 // import { GetJsonData } from "./modules/_getJsonData";
