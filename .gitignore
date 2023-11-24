@@ -1,6 +1,5 @@
 *.css
 *.map
-www/assets/dist
 
 # Logs
 logs
